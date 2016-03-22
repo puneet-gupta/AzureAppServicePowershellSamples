@@ -3,7 +3,7 @@
 # Also for the above command to succeed , the appropriate DNS mappings should be configured else you will
 # get an error for missing CNAME or AWVERIFY records.
 
-. .\Functions.ps1
+. .\Functions.ps1 # This script contains the GetResourceGroupForWebApp Function and code of this script is @ https://github.com/puneet-gupta/AzureAppServicePowershellSamples/blob/master/Functions.ps1
 
 $webAppName = "powershelldemowebapp"
 $subscriptionId = "31af7401-5a70-49be-80c7-7a6b85da7287"

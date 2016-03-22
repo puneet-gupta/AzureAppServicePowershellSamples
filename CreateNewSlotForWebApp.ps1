@@ -1,4 +1,4 @@
-﻿. .\Functions.ps1
+﻿. .\Functions.ps1 # This script contains the GetResourceGroupForWebApp Function and code of this script is @ https://github.com/puneet-gupta/AzureAppServicePowershellSamples/blob/master/Functions.ps1
 
 $webAppName = "powershelldemowebapp"
 $slotName = "staging"

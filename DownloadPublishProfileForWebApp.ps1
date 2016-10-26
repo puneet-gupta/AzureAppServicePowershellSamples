@@ -18,3 +18,23 @@ $publishProfileString = Invoke-AzureRmResourceAction -ResourceGroupName $rgName 
 $publishProfileString | Out-File -FilePath c:\temp\publishprofile.xml
 
 notepad.exe c:\temp\publishprofile.xml
+
+$publishProfileXml =[xml]$publishProfileString
+
+$webDeployPublishUrl = $publishProfileXml.publishData.publishProfile[0].publishUrl
+$webDeployPublishUserName = $publishProfileXml.publishData.publishProfile[0].userName
+$webDeployPublishPassword = $publishProfileXml.publishData.publishProfile[0].userPWD
+
+　
+$ftpPublishUrl = $publishProfileXml.publishData.publishProfile[1].publishUrl
+$ftpPublishUserName = $publishProfileXml.publishData.publishProfile[1].userName
+$ftpPublishPassword = $publishProfileXml.publishData.publishProfile[1].userPWD
+
+"webDeployPublishUrl = " + $webDeployPublishUrl 
+"webDeployPublishUserName = " + $webDeployPublishUserName  
+"webDeployPublishPassword = " + $webDeployPublishPassword 
+
+"ftpPublishUrl = " + $ftpPublishUrl 
+"ftpPublishUserName = " + $ftpPublishUserName 
+"ftpPublishPassword = " + $ftpPublishPassword 
+ 
